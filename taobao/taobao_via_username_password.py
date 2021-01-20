@@ -42,7 +42,7 @@ class taobao():
 
             try:
                 # 出现验证码，滑动验证
-                slider = self.browser.find_element_by_xpath("//span[contains(@class, 'btn_slide')]")
+                slider = self.browser.find_element_by_xpath('//*[@id="nc_1_n1z"]')
                 if slider.is_displayed():
                     # 拖拽滑块
                     self.action_chains.drag_and_drop_by_offset(slider, 258, 0).perform()
@@ -93,8 +93,8 @@ class taobao():
 
 if __name__ == '__main__':
     # 填入自己的用户名，密码
-    username = '1'
-    password = '1'
+    username = 'ivywill913'
+    password = '21750579will'
     tb = taobao()
     tb.login(username, password)
     # tb.clear_cart()
