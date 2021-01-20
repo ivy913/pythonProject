@@ -59,10 +59,9 @@ class AlienInvasion:
     def _update_screen(self):
         """更新屏幕上的图像，并切换到新屏幕。"""
         # 每次循环时都重绘屏幕。
-        self.screen.fill(self.settings.bg_color)
-        # background = pygame.image.load('images/bg.jpg')
-        # self.screen.blit(background,(0,0))
-
+        # self.screen.fill(self.settings.bg_color)
+        background = pygame.image.load('images/bg.jpg')
+        self.screen.blit(background,(0,0))
         # 飞船位置
         self.ship.blitme()
         # 让最近绘制的屏幕可见。
