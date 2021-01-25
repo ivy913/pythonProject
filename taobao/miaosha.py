@@ -46,7 +46,7 @@ while True:
     # 判断时间服务器时间是否大于或等于输入的时间
     if time_server() >= timeArray:
         # 点击结算
-        print("淘宝时间：",time_server(),"，开始结算")
+        # print("淘宝时间：",time_server(),"，开始结算")
         driver.find_element_by_xpath('//*[@id="J_Go"]').click()
         break
     else:
@@ -56,15 +56,15 @@ try:
     # 判断提交订单的按钮是否出现 出现就点击 否则继续等待 最多等待5秒
     WebDriverWait(driver, 5, 0.01).until(
         lambda el: driver.find_element_by_xpath('//*[@id="submitOrderPC_1"]/div/a[2]')).click()
-    print("订单提交成功")
-    print("秒杀成功")
+    # print("订单提交成功")
+    # print("秒杀成功")
     sum = 1
     # 判断输入密码的框是否出现 出现就输入密码
     WebDriverWait(driver, 5, 0.01).until(
         lambda el: driver.find_element_by_xpath('//*[@id="submitOrderPC_1"]/div/a[2]')).send_keys(password)
     # 点击确认付款
     driver.find_element_by_xpath('//*[@id="J_authSubmit"]').click()
-    print("付款成功")
+    # print("付款成功")
 except Exception as e:
     print("出现如下异常%s"%e)
     if sum == 0:
