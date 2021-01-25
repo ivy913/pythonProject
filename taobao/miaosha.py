@@ -4,7 +4,7 @@ import requests
 from datetime import datetime
 
 # 输入秒杀时间
-start_time = "2021-1-18 20:00:00"
+start_time = "2021-1-22 20:00:00"
 password = "520913"
 print("你只有15秒的登录时间")
 # 将输入的时间进行格式化
